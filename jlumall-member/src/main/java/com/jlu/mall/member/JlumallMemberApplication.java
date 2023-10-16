@@ -1,4 +1,4 @@
-package com.jlu.member;
+package com.jlu.mall.member;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
