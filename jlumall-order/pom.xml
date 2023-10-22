@@ -6,14 +6,12 @@
         <artifactId>mall</artifactId>
         <groupId>com.jlu.mall</groupId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>jlumall-order</name>
     <description>jlu-order</description>
-    <properties>
-        <spring-cloud.version>2022.0.4</spring-cloud.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>com.jlu.mall</groupId>
@@ -21,31 +19,11 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>
