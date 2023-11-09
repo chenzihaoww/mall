@@ -9,9 +9,6 @@ import java.util.Map;
 /**
  * 商品评价
  *
- * @author cesarz
- * @email chenzihaoww@gmail.com
- * @date 2023-10-14 22:35:06
  */
 public interface SpuCommentService extends IService<SpuCommentEntity> {
 

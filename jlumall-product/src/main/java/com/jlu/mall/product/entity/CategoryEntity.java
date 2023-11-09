@@ -2,20 +2,20 @@ package com.jlu.mall.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
-
-import lombok.Data;
 
 /**
  * 商品三级分类
  * 
- * @author cesarz
- * @email chenzihaoww@gmail.com
- * @date 2023-10-14 22:35:06
+ * @author 夏沫止水
+ * @email HeJieLin@gulimall.com
+ * @date 2020-05-22 19:00:18
  */
 @Data
 @TableName("pms_category")
@@ -42,6 +42,7 @@ public class CategoryEntity implements Serializable {
 	/**
 	 * 是否显示[0-不显示，1显示]
 	 */
+	@TableLogic(value = "1",delval = "0")
 	private Integer showStatus;
 	/**
 	 * 排序
@@ -60,7 +61,11 @@ public class CategoryEntity implements Serializable {
 	 */
 	private Integer productCount;
 
-	@TableField(exist = false) // 保存当前菜单的所有子分类
+	/**
+	 * 所有子分类
+	 */
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	@TableField(exist = false)
 	private List<CategoryEntity> children;
 
 }

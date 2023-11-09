@@ -25,6 +25,11 @@
         <module>renren-generator</module>
         <module>renren-fast</module>
         <module>jlumall-parent</module>
+        <module>jlumall-third-party</module>
+        <module>jlumall-search</module>
+        <module>jlumall-seckill</module>
+        <module>jlumall-auth-server</module>
+        <module>jlumall-cart</module>
     </modules>
 
 

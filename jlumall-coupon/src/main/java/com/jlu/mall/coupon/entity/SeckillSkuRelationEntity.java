@@ -10,10 +10,6 @@ import lombok.Data;
 
 /**
  * 秒杀活动商品关联
- * 
- * @author cesarz
- * @email chenzihaoww@gmail.com
- * @date 2023-10-15 23:42:26
  */
 @Data
 @TableName("sms_seckill_sku_relation")
@@ -44,11 +40,11 @@ public class SeckillSkuRelationEntity implements Serializable {
 	/**
 	 * 秒杀总量
 	 */
-	private Integer seckillCount;
+	private BigDecimal seckillCount;
 	/**
 	 * 每人限购数量
 	 */
-	private Integer seckillLimit;
+	private BigDecimal seckillLimit;
 	/**
 	 * 排序
 	 */

@@ -9,10 +9,6 @@ import lombok.Data;
 
 /**
  * 首页轮播广告
- * 
- * @author cesarz
- * @email chenzihaoww@gmail.com
- * @date 2023-10-15 23:42:26
  */
 @Data
 @TableName("sms_home_adv")

@@ -9,11 +9,12 @@ import java.util.Map;
 /**
  * 品牌
  *
- * @author cesarz
- * @email chenzihaoww@gmail.com
- * @date 2023-10-14 22:35:06
  */
 public interface BrandService extends IService<BrandEntity> {
+
     PageUtils queryPage(Map<String, Object> params);
+
+    void updateDetail(BrandEntity brand);
+
 }
 

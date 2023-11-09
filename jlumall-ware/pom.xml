@@ -3,22 +3,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>mall</artifactId>
+        <artifactId>jlumall-parent</artifactId>
         <groupId>com.jlu.mall</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>ware</artifactId>
+    <artifactId>jlumall-ware</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>jlumall-ware</name>
     <description>ware</description>
-    <properties>
-        <spring-cloud.version>2022.0.4</spring-cloud.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>com.jlu.mall</groupId>
             <artifactId>jlumall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 

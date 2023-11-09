@@ -9,9 +9,9 @@ import java.util.Map;
 /**
  * 秒杀活动场次
  *
- * @author cesarz
- * @email chenzihaoww@gmail.com
- * @date 2023-10-15 23:42:26
+ * @author leifengyang
+ * @email leifengyang@gmail.com
+ * @date 2019-10-08 09:36:40
  */
 public interface SeckillSessionService extends IService<SeckillSessionEntity> {
 

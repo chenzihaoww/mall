@@ -10,10 +10,6 @@ import lombok.Data;
 
 /**
  * 商品spu积分设置
- * 
- * @author cesarz
- * @email chenzihaoww@gmail.com
- * @date 2023-10-15 23:42:26
  */
 @Data
 @TableName("sms_spu_bounds")

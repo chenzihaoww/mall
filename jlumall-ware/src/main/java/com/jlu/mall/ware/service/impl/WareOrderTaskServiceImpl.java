@@ -1,5 +1,6 @@
 package com.jlu.mall.ware.service.impl;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -11,7 +12,6 @@ import com.jlu.mall.common.utils.Query;
 import com.jlu.mall.ware.dao.WareOrderTaskDao;
 import com.jlu.mall.ware.entity.WareOrderTaskEntity;
 import com.jlu.mall.ware.service.WareOrderTaskService;
-
 
 @Service("wareOrderTaskService")
 public class WareOrderTaskServiceImpl extends ServiceImpl<WareOrderTaskDao, WareOrderTaskEntity> implements WareOrderTaskService {

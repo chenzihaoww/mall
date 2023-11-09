@@ -3,30 +3,34 @@ package com.jlu.mall.gateway.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.cors.reactive.CorsConfigurationSource;
+import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;  // 包不要选错了
+//import org.springframework.web.cors.reactive.CorsConfigurationSource;
 import org.springframework.web.cors.reactive.CorsWebFilter;
 
 /**
  * 解决跨域的配置
  */
-//@Configuration
+@Configuration
 public class JluMallCorsConfiguration {
 
-//    @Beanon = new CorsConfiguration();
-    //
-//        //1、配置跨域
-//        corsConfiguration.addAllowedHeader("*");
-//        corsConfiguration.addAllowedMethod("*");
-//        corsConfiguration.addAllowedOrigin("*");
+
+    @Bean
     public CorsWebFilter corsWebFilter() {
-//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//
-//        CorsConfiguration corsConfigurati
-//        corsConfiguration.setAllowCredentials(true);
-//
-//        source.registerCorsConfiguration("/**",corsConfiguration);
-//        return new CorsWebFilter(source);
-        return null;
+        // 基于url跨域，选择reactive包下的
+        UrlBasedCorsConfigurationSource source=new UrlBasedCorsConfigurationSource();
+        // 跨域配置信息
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        // 允许跨域的头
+        corsConfiguration.addAllowedHeader("*");
+        // 允许跨域的请求方式
+        corsConfiguration.addAllowedMethod("*");
+        // 允许跨域的请求来源
+        corsConfiguration.addAllowedOriginPattern("*");
+        // 是否允许携带cookie跨域
+        corsConfiguration.setAllowCredentials(true);
+
+        // 任意url都要进行跨域配置
+        source.registerCorsConfiguration("/**",corsConfiguration);
+        return new CorsWebFilter(source);
     }
 }

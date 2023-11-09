@@ -8,10 +8,6 @@ import java.util.Map;
 
 /**
  * 专题商品
- *
- * @author cesarz
- * @email chenzihaoww@gmail.com
- * @date 2023-10-15 23:42:26
  */
 public interface HomeSubjectSpuService extends IService<HomeSubjectSpuEntity> {
 
